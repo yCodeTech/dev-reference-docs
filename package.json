@@ -1,0 +1,23 @@
+{
+	"name": "dev-reference-docs",
+	"version": "1.0.0",
+	"description": "A collection of Web Development reference documentation",
+	"scripts": {
+		"update-readme": "node .github/scripts/update-readme.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yCodeTech/dev-reference-docs.git"
+	},
+	"keywords": [
+		"reference",
+		"documentation",
+		"web-development"
+	],
+	"author": "yCodeTech",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/yCodeTech/dev-reference-docs/issues"
+	},
+	"homepage": "https://github.com/yCodeTech/dev-reference-docs#readme"
+}
