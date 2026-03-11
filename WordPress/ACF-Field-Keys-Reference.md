@@ -875,5 +875,6 @@ endif;
 ---
 
 **Generated:** March 11, 2026
+**By:** Copilot - Claude Sonnet
 **ACF Version:** Pro 6.x
 **ACF Extended Version:** Latest
