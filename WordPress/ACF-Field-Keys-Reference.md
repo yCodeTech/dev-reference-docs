@@ -12,6 +12,7 @@ Complete reference guide for all available keys when creating fields and field g
 - [Wrapper Attributes](#wrapper-attributes)
 - [ACF Extended Custom Fields](#acf-extended-custom-fields)
 - [Complete Example](#complete-example)
+- [Reference Sources](#reference-sources)
 
 ---
 
@@ -866,7 +867,7 @@ endif;
 
 ---
 
-## Additional Resources
+## Reference Sources
 
 - [ACF Documentation](https://www.advancedcustomfields.com/resources/)
 - [ACF Extended Documentation](https://www.acf-extended.com/features)

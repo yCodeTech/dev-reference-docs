@@ -16,6 +16,7 @@ This guide covers both approaches:
 - [Core Block Type Keys (PHP)](#core-block-type-keys-php)
 - [Asset and Render Keys (Core)](#asset-and-render-keys-core)
 - [Complete PHP Example](#complete-php-example)
+- [Reference Sources](#reference-sources)
 
 ---
 
