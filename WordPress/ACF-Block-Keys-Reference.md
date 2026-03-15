@@ -22,7 +22,7 @@ This guide covers both approaches:
 
 ## ACF PHP Registration Keys
 
-Keys used with `acf_register_block_type()`:
+Keys used with [`acf_register_block_type()`](https://www.advancedcustomfields.com/resources/acf_register_block_type/):
 
 | Key                 | Type         | Required | Description                                                                               |
 | ------------------- | ------------ | -------- | ----------------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ These are commonly used ACF-specific keys inside `supports`:
 
 ---
 
-## ACF Metadata Keys
+## [ACF Metadata Keys](https://www.advancedcustomfields.com/resources/acf-block-configuration-via-block-json/)
 
 When using ACF Blocks v3 (`block.json`) with PHP registration/loading, ACF-specific keys live under the `acf` object.
 
@@ -89,7 +89,7 @@ When using ACF Blocks v3 (`block.json`) with PHP registration/loading, ACF-speci
 
 ---
 
-## Core Block Supports Keys
+## [Core Block Supports Keys](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/)
 
 Core `supports` keys are passed under `supports` and handled by WordPress block editor.
 
@@ -133,7 +133,7 @@ Core `supports` keys are passed under `supports` and handled by WordPress block 
 
 ---
 
-## Core Block Type Keys (PHP)
+## [Core Block Type Keys (PHP)](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/)
 
 If you register blocks with `register_block_type()`, these are the main structural keys used in PHP args or metadata mapping:
 

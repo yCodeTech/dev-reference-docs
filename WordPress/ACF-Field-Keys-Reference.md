@@ -16,7 +16,7 @@ Complete reference guide for all available keys when creating fields and field g
 
 ---
 
-## Field Group Keys
+## [Field Group Keys](https://www.advancedcustomfields.com/resources/register-fields-via-php/#group-settings)
 
 These keys are passed to the main `acf_add_local_field_group()` function:
 
@@ -59,7 +59,7 @@ Values for the `hide_on_screen` array:
 
 ---
 
-## Universal Field Keys
+## [Universal Field Keys](https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-settings)
 
 These keys are available for all field types:
 
