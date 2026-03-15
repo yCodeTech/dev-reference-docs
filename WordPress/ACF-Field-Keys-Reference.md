@@ -93,42 +93,43 @@ These keys are available for all field types:
 
 _Applies to: `text`, `email`, `url`, `password`, `textarea`_
 
-| Key             | Type       | Default | Description                                                                   |
-| --------------- | ---------- | ------- | ----------------------------------------------------------------------------- |
-| `default_value` | string     | `''`    | Default text value                                                            |
-| `placeholder`   | string     | `''`    | Placeholder text in empty input                                               |
-| `prepend`       | string     | `''`    | Text prepended to input                                                       |
-| `append`        | string     | `''`    | Text appended to input                                                        |
-| `maxlength`     | int/string | `''`    | Maximum character limit                                                       |
-| `readonly`      | bool       | `false` | Make field read-only                                                          |
-| `disabled`      | bool       | `false` | Disable field                                                                 |
-| `pattern`       | string     | `''`    | HTML5 pattern for validation                                                  |
-| `rows`          | int        | `4`     | Number of rows (textarea only)                                                |
-| `new_lines`     | string     | `''`    | Convert newlines: `''` (none), `'wpautop'` (auto `<p>`), `'br'` (line breaks) |
+| Key             | Type       | Default | Description                                                                   | Applies To                         |
+| --------------- | ---------- | ------- | ----------------------------------------------------------------------------- | ---------------------------------- |
+| `default_value` | string     | `''`    | Default text value                                                            | `text`, `email`, `url`, `textarea` |
+| `placeholder`   | string     | `''`    | Placeholder text in empty input                                               | All                                |
+| `prepend`       | string     | `''`    | Text prepended to input                                                       | `text`, `email`, `password`        |
+| `append`        | string     | `''`    | Text appended to input                                                        | `text`, `email`, `password`        |
+| `maxlength`     | int/string | `''`    | Maximum character limit                                                       | `text`, `textarea`                 |
+| `readonly`      | bool       | `false` | Make field read-only                                                          | `text`, `email`, `url`, `password` |
+| `disabled`      | bool       | `false` | Disable field                                                                 | `text`, `email`, `url`, `password` |
+| `pattern`       | string     | `''`    | HTML5 pattern for validation                                                  | `text`, `email`, `url`, `password` |
+| `rows`          | int        | `4`     | Number of rows                                                                | `textarea`                         |
+| `new_lines`     | string     | `''`    | Convert newlines: `''` (none), `'wpautop'` (auto `<p>`), `'br'` (line breaks) | `textarea`                         |
 
 ### Number & Range Fields
 
 _Applies to: `number`, `range`_
 
-| Key             | Type      | Default | Description             |
-| --------------- | --------- | ------- | ----------------------- |
-| `default_value` | int/float | `''`    | Default numeric value   |
-| `min`           | int/float | `''`    | Minimum value           |
-| `max`           | int/float | `''`    | Maximum value           |
-| `step`          | int/float | `''`    | Increment step          |
-| `prepend`       | string    | `''`    | Text prepended to input |
-| `append`        | string    | `''`    | Text appended to input  |
+| Key             | Type      | Default | Description             | Applies To |
+| --------------- | --------- | ------- | ----------------------- | ---------- |
+| `default_value` | int/float | `''`    | Default numeric value   | All        |
+| `min`           | int/float | `''`    | Minimum value           | All        |
+| `max`           | int/float | `''`    | Maximum value           | All        |
+| `step`          | int/float | `''`    | Increment step          | All        |
+| `placeholder`   | string    | `''`    | Placeholder text        | `number`   |
+| `prepend`       | string    | `''`    | Text prepended to input | All        |
+| `append`        | string    | `''`    | Text appended to input  | All        |
 
 ### Date & Time Fields
 
 _Applies to: `date_picker`, `date_time_picker`, `time_picker`_
 
-| Key                       | Type   | Default   | Description                              |
-| ------------------------- | ------ | --------- | ---------------------------------------- |
-| `display_format`          | string | `'d/m/Y'` | Format shown to user (PHP date format)   |
-| `return_format`           | string | `'d/m/Y'` | Format returned by `get_field()`         |
-| `first_day`               | int    | `1`       | First day of week (0=Sunday, 6=Saturday) |
-| `default_to_current_date` | bool   | `false`   | Pre-fill with current date/time          |
+| Key                       | Type   | Default   | Description                              | Applies To                        |
+| ------------------------- | ------ | --------- | ---------------------------------------- | --------------------------------- |
+| `display_format`          | string | `'d/m/Y'` | Format shown to user (PHP date format)   | All                               |
+| `return_format`           | string | `'d/m/Y'` | Format returned by `get_field()`         | All                               |
+| `first_day`               | int    | `1`       | First day of week (0=Sunday, 6=Saturday) | `date_picker`, `date_time_picker` |
+| `default_to_current_date` | bool   | `false`   | Pre-fill with current date/time          | `date_picker`, `date_time_picker` |
 
 ### WYSIWYG Editor
 
@@ -195,21 +196,21 @@ _Applies to: `gallery`_
 
 _Applies to: `select`, `checkbox`, `radio`, `button_group`_
 
-| Key                         | Type         | Default            | Description                               |
-| --------------------------- | ------------ | ------------------ | ----------------------------------------- |
-| `choices`                   | array        | `[]`               | Key-value pairs: `['value' => 'Label']`   |
-| `default_value`             | string/array | `''`               | Default selected value(s)                 |
-| `allow_null`                | bool         | `false`            | Allow empty selection                     |
-| `multiple`                  | bool         | `false`            | Allow multiple selections (select only)   |
-| `ui`                        | bool         | `false`            | Use enhanced UI (Select2/toggle)          |
-| `ajax`                      | bool         | `false`            | Enable AJAX loading for select            |
-| `placeholder`               | string       | `''`               | Placeholder text (select only)            |
-| `return_format`             | string       | `'value'`          | Return `'value'`, `'label'`, or `'array'` |
-| `layout`                    | string       | `'vertical'`       | Display: `'vertical'` or `'horizontal'`   |
-| `toggle`                    | bool         | `false`            | Show toggle for all items (checkbox only) |
-| `allow_custom`              | bool         | `false`            | Allow custom values                       |
-| `save_custom`               | bool         | `false`            | Save custom values to choices             |
-| `custom_choice_button_text` | string       | `'Add new choice'` | Button label for custom values            |
+| Key                         | Type         | Default            | Description                               | Applies To                          |
+| --------------------------- | ------------ | ------------------ | ----------------------------------------- | ----------------------------------- |
+| `choices`                   | array        | `[]`               | Key-value pairs: `['value' => 'Label']`   | All                                 |
+| `default_value`             | string/array | `''`               | Default selected value(s)                 | All                                 |
+| `allow_null`                | bool         | `false`            | Allow empty selection                     | `select`, `radio`, `button_group`   |
+| `multiple`                  | bool         | `false`            | Allow multiple selections                 | `select`                            |
+| `ui`                        | bool         | `false`            | Use enhanced UI (Select2/toggle)          | `select`                            |
+| `ajax`                      | bool         | `false`            | Enable AJAX loading                       | `select`                            |
+| `placeholder`               | string       | `''`               | Placeholder text                          | `select`                            |
+| `return_format`             | string       | `'value'`          | Return `'value'`, `'label'`, or `'array'` | All                                 |
+| `layout`                    | string       | `'vertical'`       | Display: `'vertical'` or `'horizontal'`   | `checkbox`, `radio`, `button_group` |
+| `toggle`                    | bool         | `false`            | Show toggle for all items                 | `checkbox`                          |
+| `allow_custom`              | bool         | `false`            | Allow custom values                       | `select`, `checkbox`                |
+| `save_custom`               | bool         | `false`            | Save custom values to choices             | `select`, `checkbox`                |
+| `custom_choice_button_text` | string       | `'Add new choice'` | Button label for custom values            | `select`, `checkbox`                |
 
 ### True/False Field
 
@@ -235,15 +236,15 @@ _Applies to: `link`_
 
 _Applies to: `post_object`, `page_link`_
 
-| Key              | Type   | Default    | Description                           |
-| ---------------- | ------ | ---------- | ------------------------------------- |
-| `post_type`      | array  | `[]`       | Post type(s) to select from           |
-| `taxonomy`       | array  | `[]`       | Filter by taxonomy terms              |
-| `allow_null`     | bool   | `false`    | Allow empty selection                 |
-| `multiple`       | bool   | `false`    | Allow multiple selections             |
-| `return_format`  | string | `'object'` | Return `'object'` or `'id'`           |
-| `ui`             | bool   | `true`     | Use enhanced UI                       |
-| `allow_archives` | bool   | `true`     | Include archive URLs (page_link only) |
+| Key              | Type   | Default    | Description                 | Applies To    |
+| ---------------- | ------ | ---------- | --------------------------- | ------------- |
+| `post_type`      | array  | `[]`       | Post type(s) to select from | All           |
+| `taxonomy`       | array  | `[]`       | Filter by taxonomy terms    | All           |
+| `allow_null`     | bool   | `false`    | Allow empty selection       | All           |
+| `multiple`       | bool   | `false`    | Allow multiple selections   | All           |
+| `return_format`  | string | `'object'` | Return `'object'` or `'id'` | `post_object` |
+| `ui`             | bool   | `true`     | Use enhanced UI             | `post_object` |
+| `allow_archives` | bool   | `true`     | Include archive URLs        | `page_link`   |
 
 ### Relationship Field
 
@@ -321,23 +322,23 @@ _Applies to: `color_picker`_
 
 _Applies to: `message`, `accordion`_
 
-| Key            | Type   | Default     | Description                          |
-| -------------- | ------ | ----------- | ------------------------------------ |
-| `message`      | string | `''`        | Message HTML content                 |
-| `new_lines`    | string | `'wpautop'` | Convert newlines (message only)      |
-| `esc_html`     | bool   | `false`     | Escape HTML (message only)           |
-| `open`         | bool   | `false`     | Start open (accordion only)          |
-| `multi_expand` | bool   | `false`     | Allow multiple open (accordion only) |
-| `endpoint`     | bool   | `false`     | Mark as endpoint (accordion only)    |
+| Key            | Type   | Default     | Description          | Applies To  |
+| -------------- | ------ | ----------- | -------------------- | ----------- |
+| `message`      | string | `''`        | Message HTML content | `message`   |
+| `new_lines`    | string | `'wpautop'` | Convert newlines     | `message`   |
+| `esc_html`     | bool   | `false`     | Escape HTML          | `message`   |
+| `open`         | bool   | `false`     | Start open           | `accordion` |
+| `multi_expand` | bool   | `false`     | Allow multiple open  | `accordion` |
+| `endpoint`     | bool   | `false`     | Mark as endpoint     | `accordion` |
 
 ### Tab & Separator
 
 _Applies to: `tab`, `separator`_
 
-| Key         | Type   | Default | Description                        |
-| ----------- | ------ | ------- | ---------------------------------- |
-| `placement` | string | `'top'` | Tab placement: `'top'` or `'left'` |
-| `endpoint`  | bool   | `false` | Mark as endpoint                   |
+| Key         | Type   | Default | Description                        | Applies To |
+| ----------- | ------ | ------- | ---------------------------------- | ---------- |
+| `placement` | string | `'top'` | Tab placement: `'top'` or `'left'` | `tab`      |
+| `endpoint`  | bool   | `false` | Mark as endpoint                   | `tab`      |
 
 ### Group Field
 
